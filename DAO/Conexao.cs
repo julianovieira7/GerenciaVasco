@@ -9,10 +9,10 @@ namespace GerenciaVasco.DAO
 {
     class Conexao
     {
-        string conecta = "Data Source=DESKTOP-NJSP94U\\SQLEXPRESS;Initial Catalog=GerenciarVasco;Integrated Security=True";
+        string conecta = "Data Source=DESKTOP-NJSP94U\\SQLEXPRESS;Initial Catalog=GerenciaVasco;Integrated Security=True";
         protected SqlConnection conexao = null;
 
-        //Conectar no banco de dados
+        
         public void Conectar()
         {
             try
@@ -28,7 +28,6 @@ namespace GerenciaVasco.DAO
             }
         }
 
-        //Desconectar do banco de dados
         public void Desconectar()
         {
             try

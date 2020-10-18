@@ -28,58 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Adicionar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.btAdicionar = new System.Windows.Forms.Button();
+            this.btAterar = new System.Windows.Forms.Button();
+            this.btExcluir = new System.Windows.Forms.Button();
+            this.tbNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.dateContrato = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbCamisa = new System.Windows.Forms.TextBox();
+            this.comboPerna = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboPosicao = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbEstado = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbBairro = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbCidade = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbComplemento = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbEndereco = new System.Windows.Forms.TextBox();
+            this.lbCep = new System.Windows.Forms.Label();
+            this.tbCep = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idjogadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.posicaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numerocamisaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pernaboaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fimcontratoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jogadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenciaVascoDataSet = new GerenciaVasco.GerenciaVascoDataSet();
+            this.jogadorTableAdapter = new GerenciaVasco.GerenciaVascoDataSetTableAdapters.jogadorTableAdapter();
+            this.btnPesquisaNome = new System.Windows.Forms.Button();
+            this.btnPesquisaPosicao = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // Adicionar
+            // btAdicionar
             // 
-            this.Adicionar.Location = new System.Drawing.Point(21, 12);
-            this.Adicionar.Name = "Adicionar";
-            this.Adicionar.Size = new System.Drawing.Size(75, 23);
-            this.Adicionar.TabIndex = 0;
-            this.Adicionar.Text = "Adicionar";
-            this.Adicionar.UseVisualStyleBackColor = true;
+            this.btAdicionar.Location = new System.Drawing.Point(21, 12);
+            this.btAdicionar.Name = "btAdicionar";
+            this.btAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.btAdicionar.TabIndex = 0;
+            this.btAdicionar.Text = "Adicionar";
+            this.btAdicionar.UseVisualStyleBackColor = true;
+            this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click_1);
             // 
-            // button1
+            // btAterar
             // 
-            this.button1.Location = new System.Drawing.Point(113, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Alterar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btAterar.Location = new System.Drawing.Point(113, 12);
+            this.btAterar.Name = "btAterar";
+            this.btAterar.Size = new System.Drawing.Size(75, 23);
+            this.btAterar.TabIndex = 1;
+            this.btAterar.Text = "Alterar";
+            this.btAterar.UseVisualStyleBackColor = true;
+            this.btAterar.Click += new System.EventHandler(this.btAterar_Click);
             // 
-            // button2
+            // btExcluir
             // 
-            this.button2.Location = new System.Drawing.Point(204, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Excluir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btExcluir.Location = new System.Drawing.Point(204, 12);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btExcluir.TabIndex = 2;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // textBox1
+            // tbNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(413, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbNome.Location = new System.Drawing.Point(9, 41);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(413, 20);
+            this.tbNome.TabIndex = 3;
             // 
             // label1
             // 
@@ -92,16 +125,18 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.btnPesquisaPosicao);
+            this.groupBox1.Controls.Add(this.btnPesquisaNome);
+            this.groupBox1.Controls.Add(this.dateContrato);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.tbCamisa);
+            this.groupBox1.Controls.Add(this.comboPerna);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboPosicao);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbNome);
             this.groupBox1.Location = new System.Drawing.Point(21, 59);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(951, 141);
@@ -109,17 +144,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados jogador";
             // 
-            // comboBox3
+            // dateContrato
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.dateContrato.Location = new System.Drawing.Point(9, 105);
+            this.dateContrato.Name = "dateContrato";
+            this.dateContrato.Size = new System.Drawing.Size(263, 20);
+            this.dateContrato.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Termino do contrato";
+            // 
+            // tbCamisa
+            // 
+            this.tbCamisa.Location = new System.Drawing.Point(616, 42);
+            this.tbCamisa.Name = "tbCamisa";
+            this.tbCamisa.Size = new System.Drawing.Size(153, 20);
+            this.tbCamisa.TabIndex = 12;
+            // 
+            // comboPerna
+            // 
+            this.comboPerna.FormattingEnabled = true;
+            this.comboPerna.Items.AddRange(new object[] {
             "Perna esquerda",
             "Perna direita",
             "Ambidestro"});
-            this.comboBox3.Location = new System.Drawing.Point(791, 41);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(152, 21);
-            this.comboBox3.TabIndex = 11;
+            this.comboPerna.Location = new System.Drawing.Point(791, 41);
+            this.comboPerna.Name = "comboPerna";
+            this.comboPerna.Size = new System.Drawing.Size(152, 21);
+            this.comboPerna.TabIndex = 11;
             // 
             // label4
             // 
@@ -139,10 +197,10 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Nº Camisa";
             // 
-            // comboBox1
+            // comboPosicao
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboPosicao.FormattingEnabled = true;
+            this.comboPosicao.Items.AddRange(new object[] {
             "Goleiro",
             "Zagueiro",
             "Lateral Direito",
@@ -151,10 +209,10 @@
             "Meio-campo",
             "Atacante",
             "Centro avante"});
-            this.comboBox1.Location = new System.Drawing.Point(439, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 21);
-            this.comboBox1.TabIndex = 7;
+            this.comboPosicao.Location = new System.Drawing.Point(439, 41);
+            this.comboPosicao.Name = "comboPosicao";
+            this.comboPosicao.Size = new System.Drawing.Size(152, 21);
+            this.comboPosicao.TabIndex = 7;
             // 
             // label2
             // 
@@ -167,6 +225,19 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnBuscar);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.tbEstado);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.tbBairro);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.tbCidade);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.tbComplemento);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.tbEndereco);
+            this.groupBox2.Controls.Add(this.lbCep);
+            this.groupBox2.Controls.Add(this.tbCep);
             this.groupBox2.Location = new System.Drawing.Point(21, 218);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(931, 100);
@@ -174,28 +245,110 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço do jogador";
             // 
-            // textBox2
+            // btnBuscar
             // 
-            this.textBox2.Location = new System.Drawing.Point(616, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 12;
+            this.btnBuscar.Location = new System.Drawing.Point(183, 33);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // label11
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 78);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Termino do contrato";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(596, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Estado";
             // 
-            // dateTimePicker1
+            // tbEstado
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(9, 105);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(263, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.tbEstado.Location = new System.Drawing.Point(616, 74);
+            this.tbEstado.Name = "tbEstado";
+            this.tbEstado.Size = new System.Drawing.Size(137, 20);
+            this.tbEstado.TabIndex = 24;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(596, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Bairro";
+            // 
+            // tbBairro
+            // 
+            this.tbBairro.Location = new System.Drawing.Point(616, 35);
+            this.tbBairro.Name = "tbBairro";
+            this.tbBairro.Size = new System.Drawing.Size(137, 20);
+            this.tbBairro.TabIndex = 22;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(283, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Cidade";
+            // 
+            // tbCidade
+            // 
+            this.tbCidade.Location = new System.Drawing.Point(319, 74);
+            this.tbCidade.Name = "tbCidade";
+            this.tbCidade.Size = new System.Drawing.Size(137, 20);
+            this.tbCidade.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(283, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Complemento";
+            // 
+            // tbComplemento
+            // 
+            this.tbComplemento.Location = new System.Drawing.Point(319, 35);
+            this.tbComplemento.Name = "tbComplemento";
+            this.tbComplemento.Size = new System.Drawing.Size(137, 20);
+            this.tbComplemento.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 58);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Endereco";
+            // 
+            // tbEndereco
+            // 
+            this.tbEndereco.Location = new System.Drawing.Point(35, 74);
+            this.tbEndereco.Name = "tbEndereco";
+            this.tbEndereco.Size = new System.Drawing.Size(157, 20);
+            this.tbEndereco.TabIndex = 16;
+            // 
+            // lbCep
+            // 
+            this.lbCep.AutoSize = true;
+            this.lbCep.Location = new System.Drawing.Point(17, 19);
+            this.lbCep.Name = "lbCep";
+            this.lbCep.Size = new System.Drawing.Size(31, 13);
+            this.lbCep.TabIndex = 15;
+            this.lbCep.Text = "CEP:";
+            // 
+            // tbCep
+            // 
+            this.tbCep.Location = new System.Drawing.Point(35, 35);
+            this.tbCep.Name = "tbCep";
+            this.tbCep.Size = new System.Drawing.Size(114, 20);
+            this.tbCep.TabIndex = 0;
             // 
             // label6
             // 
@@ -206,22 +359,126 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Lista de jogadores";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idjogadorDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.posicaoDataGridViewTextBoxColumn,
+            this.numerocamisaDataGridViewTextBoxColumn,
+            this.pernaboaDataGridViewTextBoxColumn,
+            this.fimcontratoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.jogadorBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(113, 358);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(645, 138);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Mouse);
+            this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
+            // 
+            // idjogadorDataGridViewTextBoxColumn
+            // 
+            this.idjogadorDataGridViewTextBoxColumn.DataPropertyName = "id_jogador";
+            this.idjogadorDataGridViewTextBoxColumn.HeaderText = "id_jogador";
+            this.idjogadorDataGridViewTextBoxColumn.Name = "idjogadorDataGridViewTextBoxColumn";
+            this.idjogadorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // posicaoDataGridViewTextBoxColumn
+            // 
+            this.posicaoDataGridViewTextBoxColumn.DataPropertyName = "posicao";
+            this.posicaoDataGridViewTextBoxColumn.HeaderText = "posicao";
+            this.posicaoDataGridViewTextBoxColumn.Name = "posicaoDataGridViewTextBoxColumn";
+            this.posicaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numerocamisaDataGridViewTextBoxColumn
+            // 
+            this.numerocamisaDataGridViewTextBoxColumn.DataPropertyName = "numero_camisa";
+            this.numerocamisaDataGridViewTextBoxColumn.HeaderText = "numero_camisa";
+            this.numerocamisaDataGridViewTextBoxColumn.Name = "numerocamisaDataGridViewTextBoxColumn";
+            this.numerocamisaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pernaboaDataGridViewTextBoxColumn
+            // 
+            this.pernaboaDataGridViewTextBoxColumn.DataPropertyName = "perna_boa";
+            this.pernaboaDataGridViewTextBoxColumn.HeaderText = "perna_boa";
+            this.pernaboaDataGridViewTextBoxColumn.Name = "pernaboaDataGridViewTextBoxColumn";
+            this.pernaboaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fimcontratoDataGridViewTextBoxColumn
+            // 
+            this.fimcontratoDataGridViewTextBoxColumn.DataPropertyName = "fim_contrato";
+            this.fimcontratoDataGridViewTextBoxColumn.HeaderText = "fim_contrato";
+            this.fimcontratoDataGridViewTextBoxColumn.Name = "fimcontratoDataGridViewTextBoxColumn";
+            this.fimcontratoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jogadorBindingSource
+            // 
+            this.jogadorBindingSource.DataMember = "jogador";
+            this.jogadorBindingSource.DataSource = this.gerenciaVascoDataSet;
+            // 
+            // gerenciaVascoDataSet
+            // 
+            this.gerenciaVascoDataSet.DataSetName = "GerenciaVascoDataSet";
+            this.gerenciaVascoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jogadorTableAdapter
+            // 
+            this.jogadorTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnPesquisaNome
+            // 
+            this.btnPesquisaNome.Location = new System.Drawing.Point(347, 68);
+            this.btnPesquisaNome.Name = "btnPesquisaNome";
+            this.btnPesquisaNome.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisaNome.TabIndex = 26;
+            this.btnPesquisaNome.Text = "Pesquisar";
+            this.btnPesquisaNome.UseVisualStyleBackColor = true;
+            this.btnPesquisaNome.Click += new System.EventHandler(this.btnPesquisaNome_Click);
+            // 
+            // btnPesquisaPosicao
+            // 
+            this.btnPesquisaPosicao.Location = new System.Drawing.Point(516, 68);
+            this.btnPesquisaPosicao.Name = "btnPesquisaPosicao";
+            this.btnPesquisaPosicao.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisaPosicao.TabIndex = 27;
+            this.btnPesquisaPosicao.Text = "Pesquisar";
+            this.btnPesquisaPosicao.UseVisualStyleBackColor = true;
+            this.btnPesquisaPosicao.Click += new System.EventHandler(this.btnPesquisaPosicao_Click);
+            // 
             // GerenciaJogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(970, 561);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Adicionar);
+            this.Controls.Add(this.btExcluir);
+            this.Controls.Add(this.btAterar);
+            this.Controls.Add(this.btAdicionar);
             this.Name = "GerenciaJogador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GerenciaJogador";
+            this.Load += new System.EventHandler(this.GerenciaJogador_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,21 +486,46 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Adicionar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btAdicionar;
+        private System.Windows.Forms.Button btAterar;
+        private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboPosicao;
+        private System.Windows.Forms.ComboBox comboPerna;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox tbCamisa;
+        private System.Windows.Forms.DateTimePicker dateContrato;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private GerenciaVascoDataSet gerenciaVascoDataSet;
+        private System.Windows.Forms.BindingSource jogadorBindingSource;
+        private GerenciaVascoDataSetTableAdapters.jogadorTableAdapter jogadorTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idjogadorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn posicaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numerocamisaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pernaboaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fimcontratoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbEstado;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbBairro;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbCidade;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbComplemento;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbEndereco;
+        private System.Windows.Forms.Label lbCep;
+        private System.Windows.Forms.TextBox tbCep;
+        private System.Windows.Forms.Button btnPesquisaNome;
+        private System.Windows.Forms.Button btnPesquisaPosicao;
     }
 }

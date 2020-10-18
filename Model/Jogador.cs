@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GerenciaVasco.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,18 +13,19 @@ namespace GerenciaVasco.model
         private int id;
         private String nome;
         private String posicao;
-        private int numeroCamisa;
+        private String numeroCamisa;
         private String pernaBoa;
         private DateTime fimContrato;
-        private String endereco;
+        //private Endereco endereco; 
+
 
         public int Id { get => id; set => id = value; }
         public string Nome { get => nome; set => nome = value; }
         public string Posicao { get => posicao; set => posicao = value; }
-        public int NumeroCamisa { get => numeroCamisa; set => numeroCamisa = value; }
-        public string Endereco { get => endereco; set => endereco = value; }
+        public string NumeroCamisa { get => numeroCamisa; set => numeroCamisa = value; }
+        
         public string PernaBoa { get => pernaBoa; set => pernaBoa = value; }
         public DateTime FimContrato { get => fimContrato; set => fimContrato = value; }
-
+    //    public Endereco Endereco { get => endereco; set => endereco = value; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using GerenciaVasco.model;
+﻿    using GerenciaVasco.model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,7 +16,8 @@ namespace GerenciaVasco.DAO
         public void Create(Jogador jogador) {
             try
             {
-                comando = new SqlCommand("INSERT INTO Jogador(nome, posicao, numeroCamisa, pernaBoa, fimContrato) values (@nome, @posicao, @numeroCamisa, @pernaBoa, @fimContrato)", conexao);
+                Conectar();
+                comando = new SqlCommand("INSERT INTO Jogador(nome, posicao, numero_camisa, perna_boa, fim_contrato) VALUES (@nome, @posicao, @numeroCamisa, @pernaBoa, @fimContrato)", conexao);
                 comando.Parameters.AddWithValue("@nome", jogador.Nome);
                 comando.Parameters.AddWithValue("@posicao", jogador.Posicao);
                 comando.Parameters.AddWithValue("@numeroCamisa", jogador.NumeroCamisa);
@@ -39,7 +40,9 @@ namespace GerenciaVasco.DAO
         {
             try
             {
-                comando = new SqlCommand("UPDATE Jogador set  nome = @nome, posicao = @posicao, numeroCamisa = @numeroCamisa, pernaBoa = @pernaBoa, fimContrato = @fimContrato WHERE idjogador = @id", conexao);
+                
+                Conectar();
+                comando = new SqlCommand("UPDATE Jogador SET nome = @nome, posicao = @posicao, numero_camisa = @numeroCamisa, perna_boa = @pernaboa, fim_contrato = @fimContrato WHERE id_jogador = @id", conexao);
 
                 comando.Parameters.AddWithValue("@id", jogador.Id);
                 comando.Parameters.AddWithValue("@nome", jogador.Nome);
@@ -49,10 +52,11 @@ namespace GerenciaVasco.DAO
                 comando.Parameters.AddWithValue("@fimContrato", jogador.FimContrato);
 
                 comando.ExecuteNonQuery();
+                
             }
-            catch (Exception)
+            catch (Exception erro)
             {
-                throw;
+                throw erro;
             }
             finally
             {
@@ -67,7 +71,7 @@ namespace GerenciaVasco.DAO
             {
                 Conectar();
 
-                comando = new SqlCommand("DELETE FROM Jogador WHERE idjogador = @id", conexao);
+                comando = new SqlCommand("DELETE FROM Jogador WHERE id_jogador = @id", conexao);
 
                 comando.Parameters.AddWithValue("@id", jogador.Id);
 

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using GerenciaVasco.Controller;
+using GerenciaVasco.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +15,175 @@ namespace GerenciaVasco.View
 {
     public partial class GerenciaJogador : Form
     {
+        GerenciaJogador entrada;
+
+        Jogador jogador = new Jogador();
+        JogadorController jogaController = new JogadorController();
+        private int temporalId;
+           
+
         public GerenciaJogador()
         {
             InitializeComponent();
+           
+        }
+
+        private void Salvar(Jogador jogador) {
+                if (tbNome.Text.Trim() == string.Empty)
+                {   
+                    MessageBox.Show("Nome do jogador não pode estar em branco!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+                else
+                {
+                    jogador.Nome = tbNome.Text;
+                    jogador.Posicao = comboPosicao.Text;
+                    jogador.NumeroCamisa = tbCamisa.Text;
+                    jogador.PernaBoa = comboPerna.Text;
+                    jogador.FimContrato = dateContrato.Value;
+
+                    jogaController.Create(jogador);
+
+                    MessageBox.Show("Novo Jogador salvo com sucesso!");
+
+                    Limpar();
+
+
+                }
+            }
+        private void Editar(Jogador jogador)
+        {
+            if (tbNome.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Nome do jogador não pode estar em branco!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+            else
+            {
+                jogador.Nome = tbNome.Text;
+                jogador.Posicao = comboPosicao.Text;
+                jogador.NumeroCamisa = tbCamisa.Text;
+                jogador.PernaBoa = comboPerna.Text;
+                jogador.FimContrato = dateContrato.Value;
+
+                jogaController.Update(jogador);
+
+                MessageBox.Show("Jogador alterado com sucesso!");
+
+                Limpar();
+
+            }
+        }
+
+        private void Excluir(Jogador jogador)
+        {
+            if (tbNome.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Não é possivel excluir campos em branco", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (MessageBox.Show("Deseja realmente excluir esse jogador?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
+            {
+
+            }
+            else
+            {
+                jogador.Id = temporalId;
+               
+
+                jogaController.Delete(jogador);
+
+                MessageBox.Show("Jogador excluido com sucesso!");
+
+                Listar();
+                Limpar();
+            }
+        }
+
+        private void PesquisarNome(Jogador jogador)
+        {
+            jogador.Nome = tbNome.Text;
+
+            dataGridView1.DataSource = jogaController.PesquisarNome(jogador);
+        }
+
+        private void PesquisarPosicao(Jogador jogador)
+        {
+            jogador.Posicao = comboPosicao.Text;
+
+            dataGridView1.DataSource = jogaController.PesquisarPosicao(jogador);
+        }
+        public void Limpar()
+            {   
+                tbNome.Clear();
+                tbCamisa.Clear();
+            
+            }
+
+        private void Listar()
+        {
+            dataGridView1.DataSource = jogaController.Listar();
+        }
+
+
+
+        private void btAdicionar_Click_1(object sender, EventArgs e)
+        {
+            Salvar(jogador);
+        }
+
+        private void btAterar_Click(object sender, EventArgs e)
+
+        {
+            jogador.Id = temporalId;
+            Editar(jogador);
+            Listar();
+        }
+
+        private void GerenciaJogador_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'gerenciaVascoDataSet.jogador'. Você pode movê-la ou removê-la conforme necessário.
+            this.jogadorTableAdapter.Fill(this.gerenciaVascoDataSet.jogador);
+
+        }
+
+        private void Mouse(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                temporalId = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                 tbNome.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                comboPosicao.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                tbCamisa.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                comboPerna.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                dateContrato.Text= dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+
+            }
+
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            Excluir(jogador);
+
+        }
+
+        private void btnPesquisaNome_Click(object sender, EventArgs e)
+        {
+            Jogador jogador = new Jogador();
+            PesquisarNome(jogador);
+        }
+
+        private void btnPesquisaPosicao_Click(object sender, EventArgs e)
+        {
+            Jogador jogador = new Jogador();
+            PesquisarPosicao(jogador);
         }
     }
 }
