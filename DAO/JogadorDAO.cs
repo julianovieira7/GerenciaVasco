@@ -57,7 +57,7 @@ namespace GerenciaVasco.DAO
                 comando.Parameters.AddWithValue("@pernaBoa", jogador.PernaBoa);
                 comando.Parameters.AddWithValue("@fimContrato", jogador.FimContrato);
                 comando.Parameters.AddWithValue("@cep", jogador.Endereco.Cep);
-                comando.Parameters.AddWithValue("@endereco1", jogador.Endereco1);
+                comando.Parameters.AddWithValue("@endereco1", jogador.Endereco.Endereco1);
                 comando.Parameters.AddWithValue("@complemento", jogador.Endereco.Complemento);
                 comando.Parameters.AddWithValue("@cidade", jogador.Endereco.Cidade);
                 comando.Parameters.AddWithValue("@bairro", jogador.Endereco.Bairro);

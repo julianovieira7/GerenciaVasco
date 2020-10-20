@@ -95,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\GerenciaJogador.resx">
       <DependentUpon>GerenciaJogador.cs</DependentUpon>
@@ -328,6 +329,21 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lucas-ribamar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribagol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vasco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vasco da gama.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vasco-wallpaper.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

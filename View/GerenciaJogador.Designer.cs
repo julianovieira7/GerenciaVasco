@@ -61,17 +61,6 @@
             this.tbCep = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.jogadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gerenciaVascoDataSet = new GerenciaVasco.GerenciaVascoDataSet();
-            this.jogadorTableAdapter = new GerenciaVasco.GerenciaVascoDataSetTableAdapters.jogadorTableAdapter();
-            this.gerenciaVascoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gerenciaVascoDataSet1 = new GerenciaVasco.GerenciaVascoDataSet1();
-            this.gerenciaVascoDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jogadorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.jogadorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.jogadorTableAdapter1 = new GerenciaVasco.GerenciaVascoDataSet1TableAdapters.jogadorTableAdapter();
-            this.jogadorBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.gerenciaVascoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idjogadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.posicaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,16 +73,27 @@
             this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bairroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jogadorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenciaVascoDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenciaVascoDataSet1 = new GerenciaVasco.GerenciaVascoDataSet1();
+            this.jogadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenciaVascoDataSet = new GerenciaVasco.GerenciaVascoDataSet();
+            this.jogadorTableAdapter = new GerenciaVasco.GerenciaVascoDataSetTableAdapters.jogadorTableAdapter();
+            this.gerenciaVascoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jogadorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.jogadorTableAdapter1 = new GerenciaVasco.GerenciaVascoDataSet1TableAdapters.jogadorTableAdapter();
+            this.jogadorBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenciaVascoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSetBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -146,6 +146,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = global::GerenciaVasco.Properties.Resources.ribagol;
             this.groupBox1.Controls.Add(this.btnPesquisaPosicao);
             this.groupBox1.Controls.Add(this.btnPesquisaNome);
             this.groupBox1.Controls.Add(this.dateContrato);
@@ -160,7 +161,7 @@
             this.groupBox1.Controls.Add(this.tbNome);
             this.groupBox1.Location = new System.Drawing.Point(21, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(951, 141);
+            this.groupBox1.Size = new System.Drawing.Size(931, 133);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados jogador";
@@ -203,7 +204,7 @@
             // 
             // tbCamisa
             // 
-            this.tbCamisa.Location = new System.Drawing.Point(616, 42);
+            this.tbCamisa.Location = new System.Drawing.Point(600, 40);
             this.tbCamisa.Name = "tbCamisa";
             this.tbCamisa.Size = new System.Drawing.Size(153, 20);
             this.tbCamisa.TabIndex = 12;
@@ -215,7 +216,7 @@
             "Perna esquerda",
             "Perna direita",
             "Ambidestro"});
-            this.comboPerna.Location = new System.Drawing.Point(791, 41);
+            this.comboPerna.Location = new System.Drawing.Point(769, 39);
             this.comboPerna.Name = "comboPerna";
             this.comboPerna.Size = new System.Drawing.Size(152, 21);
             this.comboPerna.TabIndex = 11;
@@ -223,7 +224,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(788, 25);
+            this.label4.Location = new System.Drawing.Point(766, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 10;
@@ -250,7 +251,7 @@
             "Meio-campo",
             "Atacante",
             "Centro avante"});
-            this.comboPosicao.Location = new System.Drawing.Point(439, 41);
+            this.comboPosicao.Location = new System.Drawing.Point(439, 40);
             this.comboPosicao.Name = "comboPosicao";
             this.comboPosicao.Size = new System.Drawing.Size(152, 21);
             this.comboPosicao.TabIndex = 7;
@@ -266,6 +267,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackgroundImage = global::GerenciaVasco.Properties.Resources.ribagol;
             this.groupBox2.Controls.Add(this.btnBuscar);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.tbEstado);
@@ -279,7 +281,7 @@
             this.groupBox2.Controls.Add(this.tbEndereco);
             this.groupBox2.Controls.Add(this.lbCep);
             this.groupBox2.Controls.Add(this.tbCep);
-            this.groupBox2.Location = new System.Drawing.Point(21, 218);
+            this.groupBox2.Location = new System.Drawing.Point(21, 224);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(931, 100);
             this.groupBox2.TabIndex = 6;
@@ -395,7 +397,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 342);
+            this.label6.Location = new System.Drawing.Point(25, 355);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 13);
             this.label6.TabIndex = 7;
@@ -427,59 +429,6 @@
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Mouse);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
-            // 
-            // jogadorBindingSource
-            // 
-            this.jogadorBindingSource.DataMember = "jogador";
-            this.jogadorBindingSource.DataSource = this.gerenciaVascoDataSet;
-            // 
-            // gerenciaVascoDataSet
-            // 
-            this.gerenciaVascoDataSet.DataSetName = "GerenciaVascoDataSet";
-            this.gerenciaVascoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // jogadorTableAdapter
-            // 
-            this.jogadorTableAdapter.ClearBeforeFill = true;
-            // 
-            // gerenciaVascoDataSetBindingSource
-            // 
-            this.gerenciaVascoDataSetBindingSource.DataSource = this.gerenciaVascoDataSet;
-            this.gerenciaVascoDataSetBindingSource.Position = 0;
-            // 
-            // gerenciaVascoDataSet1
-            // 
-            this.gerenciaVascoDataSet1.DataSetName = "GerenciaVascoDataSet1";
-            this.gerenciaVascoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gerenciaVascoDataSet1BindingSource
-            // 
-            this.gerenciaVascoDataSet1BindingSource.DataSource = this.gerenciaVascoDataSet1;
-            this.gerenciaVascoDataSet1BindingSource.Position = 0;
-            // 
-            // jogadorBindingSource1
-            // 
-            this.jogadorBindingSource1.DataMember = "jogador";
-            this.jogadorBindingSource1.DataSource = this.gerenciaVascoDataSetBindingSource;
-            // 
-            // jogadorBindingSource2
-            // 
-            this.jogadorBindingSource2.DataMember = "jogador";
-            this.jogadorBindingSource2.DataSource = this.gerenciaVascoDataSet1BindingSource;
-            // 
-            // jogadorTableAdapter1
-            // 
-            this.jogadorTableAdapter1.ClearBeforeFill = true;
-            // 
-            // jogadorBindingSource3
-            // 
-            this.jogadorBindingSource3.DataMember = "jogador";
-            this.jogadorBindingSource3.DataSource = this.gerenciaVascoDataSet1BindingSource;
-            // 
-            // gerenciaVascoDataSetBindingSource1
-            // 
-            this.gerenciaVascoDataSetBindingSource1.DataSource = this.gerenciaVascoDataSet;
-            this.gerenciaVascoDataSetBindingSource1.Position = 0;
             // 
             // idjogadorDataGridViewTextBoxColumn
             // 
@@ -554,10 +503,65 @@
             this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             // 
+            // jogadorBindingSource2
+            // 
+            this.jogadorBindingSource2.DataMember = "jogador";
+            this.jogadorBindingSource2.DataSource = this.gerenciaVascoDataSet1BindingSource;
+            // 
+            // gerenciaVascoDataSet1BindingSource
+            // 
+            this.gerenciaVascoDataSet1BindingSource.DataSource = this.gerenciaVascoDataSet1;
+            this.gerenciaVascoDataSet1BindingSource.Position = 0;
+            // 
+            // gerenciaVascoDataSet1
+            // 
+            this.gerenciaVascoDataSet1.DataSetName = "GerenciaVascoDataSet1";
+            this.gerenciaVascoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jogadorBindingSource
+            // 
+            this.jogadorBindingSource.DataMember = "jogador";
+            this.jogadorBindingSource.DataSource = this.gerenciaVascoDataSet;
+            // 
+            // gerenciaVascoDataSet
+            // 
+            this.gerenciaVascoDataSet.DataSetName = "GerenciaVascoDataSet";
+            this.gerenciaVascoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jogadorTableAdapter
+            // 
+            this.jogadorTableAdapter.ClearBeforeFill = true;
+            // 
+            // gerenciaVascoDataSetBindingSource
+            // 
+            this.gerenciaVascoDataSetBindingSource.DataSource = this.gerenciaVascoDataSet;
+            this.gerenciaVascoDataSetBindingSource.Position = 0;
+            // 
+            // jogadorBindingSource1
+            // 
+            this.jogadorBindingSource1.DataMember = "jogador";
+            this.jogadorBindingSource1.DataSource = this.gerenciaVascoDataSetBindingSource;
+            // 
+            // jogadorTableAdapter1
+            // 
+            this.jogadorTableAdapter1.ClearBeforeFill = true;
+            // 
+            // jogadorBindingSource3
+            // 
+            this.jogadorBindingSource3.DataMember = "jogador";
+            this.jogadorBindingSource3.DataSource = this.gerenciaVascoDataSet1BindingSource;
+            // 
+            // gerenciaVascoDataSetBindingSource1
+            // 
+            this.gerenciaVascoDataSetBindingSource1.DataSource = this.gerenciaVascoDataSet;
+            this.gerenciaVascoDataSetBindingSource1.Position = 0;
+            // 
             // GerenciaJogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GerenciaVasco.Properties.Resources.vasco_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(970, 561);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
@@ -575,13 +579,13 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSetBindingSource1)).EndInit();
             this.ResumeLayout(false);

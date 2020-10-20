@@ -44,12 +44,12 @@ namespace GerenciaVasco.View
                 jogador.NumeroCamisa = tbCamisa.Text;
                 jogador.PernaBoa = comboPerna.Text;
                 jogador.FimContrato = dateContrato.Value;
-                jogador.Cep = tbCep.Text;
-                jogador.Endereco1 = tbEndereco.Text;
-                jogador.Complemento = tbComplemento.Text;
-                jogador.Cidade = tbCidade.Text;
-                jogador.Bairro = tbBairro.Text;
-                jogador.Estado = tbEstado.Text;
+                jogador.Endereco.Cep = tbCep.Text;
+                jogador.Endereco.Endereco1 = tbEndereco.Text;
+                jogador.Endereco.Complemento = tbComplemento.Text;
+                jogador.Endereco.Cidade = tbCidade.Text;
+                jogador.Endereco.Bairro = tbBairro.Text;
+                jogador.Endereco.Estado = tbEstado.Text;
 
 
                 jogaController.Create(jogador);
