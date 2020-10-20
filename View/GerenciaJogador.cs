@@ -1,5 +1,6 @@
 ﻿using GerenciaVasco.Controller;
 using GerenciaVasco.model;
+using GerenciaVasco.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,16 +19,22 @@ namespace GerenciaVasco.View
         GerenciaJogador entrada;
 
         Jogador jogador = new Jogador();
+        Endereco endereco = new Endereco();
+        
         JogadorController jogaController = new JogadorController();
         private int temporalId;
 
 
         public GerenciaJogador()
         {
-            InitializeComponent(); 
-             btAterar.Enabled = false;
-           btExcluir.Enabled = false; 
+            InitializeComponent();
+
+            jogador.Endereco = endereco;
+            btAterar.Enabled = false;
+            btExcluir.Enabled = false; 
       }
+       
+       
 
         private void Salvar(Jogador jogador)
         {
@@ -44,6 +51,7 @@ namespace GerenciaVasco.View
                 jogador.NumeroCamisa = tbCamisa.Text;
                 jogador.PernaBoa = comboPerna.Text;
                 jogador.FimContrato = dateContrato.Value;
+                
                 jogador.Endereco.Cep = tbCep.Text;
                 jogador.Endereco.Endereco1 = tbEndereco.Text;
                 jogador.Endereco.Complemento = tbComplemento.Text;
@@ -54,10 +62,12 @@ namespace GerenciaVasco.View
 
                 jogaController.Create(jogador);
 
-                MessageBox.Show("Novo Jogador salvo com sucesso!");
+                MessageBox.Show("Hoje tem gol do Ribamar!");
 
                 Listar();
                 Limpar();
+                btAterar.Enabled = false;
+                btExcluir.Enabled = false;
 
 
             }
@@ -90,6 +100,8 @@ namespace GerenciaVasco.View
 
                 Listar();
                 Limpar();
+                btAterar.Enabled = false;
+                btExcluir.Enabled = false;
 
             }
         }
@@ -115,6 +127,8 @@ namespace GerenciaVasco.View
 
                 Listar();
                 Limpar();
+                btAterar.Enabled = false;
+                btExcluir.Enabled = false;
             }
         }
 
@@ -123,6 +137,8 @@ namespace GerenciaVasco.View
             jogador.Nome = tbNome.Text;
 
             dataGridView1.DataSource = jogaController.PesquisarNome(jogador);
+            btAterar.Enabled = false;
+            btExcluir.Enabled = false;
         }
 
         private void PesquisarPosicao(Jogador jogador)
@@ -130,6 +146,8 @@ namespace GerenciaVasco.View
             jogador.Posicao = comboPosicao.Text;
 
             dataGridView1.DataSource = jogaController.PesquisarPosicao(jogador);
+            btAterar.Enabled = false;
+            btExcluir.Enabled = false;
         }
         public void Limpar()
         {
@@ -196,6 +214,7 @@ namespace GerenciaVasco.View
                 tbEstado.Text = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
                 btAterar.Enabled = true;
                 btExcluir.Enabled = true;
+                btAdicionar.Enabled = false;
             }
 
         }
