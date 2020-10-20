@@ -35,6 +35,8 @@
             this.tbNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPesquisaPosicao = new System.Windows.Forms.Button();
+            this.btnPesquisaNome = new System.Windows.Forms.Button();
             this.dateContrato = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.tbCamisa = new System.Windows.Forms.TextBox();
@@ -59,22 +61,41 @@
             this.tbCep = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.jogadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenciaVascoDataSet = new GerenciaVasco.GerenciaVascoDataSet();
+            this.jogadorTableAdapter = new GerenciaVasco.GerenciaVascoDataSetTableAdapters.jogadorTableAdapter();
+            this.gerenciaVascoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenciaVascoDataSet1 = new GerenciaVasco.GerenciaVascoDataSet1();
+            this.gerenciaVascoDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jogadorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.jogadorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.jogadorTableAdapter1 = new GerenciaVasco.GerenciaVascoDataSet1TableAdapters.jogadorTableAdapter();
+            this.jogadorBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenciaVascoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idjogadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.posicaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numerocamisaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pernaboaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fimcontratoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jogadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gerenciaVascoDataSet = new GerenciaVasco.GerenciaVascoDataSet();
-            this.jogadorTableAdapter = new GerenciaVasco.GerenciaVascoDataSetTableAdapters.jogadorTableAdapter();
-            this.btnPesquisaNome = new System.Windows.Forms.Button();
-            this.btnPesquisaPosicao = new System.Windows.Forms.Button();
+            this.cepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endereco1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.complementoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btAdicionar
@@ -143,6 +164,26 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados jogador";
+            // 
+            // btnPesquisaPosicao
+            // 
+            this.btnPesquisaPosicao.Location = new System.Drawing.Point(516, 68);
+            this.btnPesquisaPosicao.Name = "btnPesquisaPosicao";
+            this.btnPesquisaPosicao.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisaPosicao.TabIndex = 27;
+            this.btnPesquisaPosicao.Text = "Pesquisar";
+            this.btnPesquisaPosicao.UseVisualStyleBackColor = true;
+            this.btnPesquisaPosicao.Click += new System.EventHandler(this.btnPesquisaPosicao_Click);
+            // 
+            // btnPesquisaNome
+            // 
+            this.btnPesquisaNome.Location = new System.Drawing.Point(347, 68);
+            this.btnPesquisaNome.Name = "btnPesquisaNome";
+            this.btnPesquisaNome.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisaNome.TabIndex = 26;
+            this.btnPesquisaNome.Text = "Pesquisar";
+            this.btnPesquisaNome.UseVisualStyleBackColor = true;
+            this.btnPesquisaNome.Click += new System.EventHandler(this.btnPesquisaNome_Click);
             // 
             // dateContrato
             // 
@@ -253,6 +294,7 @@
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // label11
             // 
@@ -361,6 +403,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -369,58 +412,21 @@
             this.posicaoDataGridViewTextBoxColumn,
             this.numerocamisaDataGridViewTextBoxColumn,
             this.pernaboaDataGridViewTextBoxColumn,
-            this.fimcontratoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.jogadorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(113, 358);
+            this.fimcontratoDataGridViewTextBoxColumn,
+            this.cepDataGridViewTextBoxColumn,
+            this.endereco1DataGridViewTextBoxColumn,
+            this.complementoDataGridViewTextBoxColumn,
+            this.cidadeDataGridViewTextBoxColumn,
+            this.bairroDataGridViewTextBoxColumn,
+            this.estadoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.jogadorBindingSource2;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 371);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(645, 138);
+            this.dataGridView1.Size = new System.Drawing.Size(931, 178);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Mouse);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
-            // 
-            // idjogadorDataGridViewTextBoxColumn
-            // 
-            this.idjogadorDataGridViewTextBoxColumn.DataPropertyName = "id_jogador";
-            this.idjogadorDataGridViewTextBoxColumn.HeaderText = "id_jogador";
-            this.idjogadorDataGridViewTextBoxColumn.Name = "idjogadorDataGridViewTextBoxColumn";
-            this.idjogadorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // posicaoDataGridViewTextBoxColumn
-            // 
-            this.posicaoDataGridViewTextBoxColumn.DataPropertyName = "posicao";
-            this.posicaoDataGridViewTextBoxColumn.HeaderText = "posicao";
-            this.posicaoDataGridViewTextBoxColumn.Name = "posicaoDataGridViewTextBoxColumn";
-            this.posicaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numerocamisaDataGridViewTextBoxColumn
-            // 
-            this.numerocamisaDataGridViewTextBoxColumn.DataPropertyName = "numero_camisa";
-            this.numerocamisaDataGridViewTextBoxColumn.HeaderText = "numero_camisa";
-            this.numerocamisaDataGridViewTextBoxColumn.Name = "numerocamisaDataGridViewTextBoxColumn";
-            this.numerocamisaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pernaboaDataGridViewTextBoxColumn
-            // 
-            this.pernaboaDataGridViewTextBoxColumn.DataPropertyName = "perna_boa";
-            this.pernaboaDataGridViewTextBoxColumn.HeaderText = "perna_boa";
-            this.pernaboaDataGridViewTextBoxColumn.Name = "pernaboaDataGridViewTextBoxColumn";
-            this.pernaboaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fimcontratoDataGridViewTextBoxColumn
-            // 
-            this.fimcontratoDataGridViewTextBoxColumn.DataPropertyName = "fim_contrato";
-            this.fimcontratoDataGridViewTextBoxColumn.HeaderText = "fim_contrato";
-            this.fimcontratoDataGridViewTextBoxColumn.Name = "fimcontratoDataGridViewTextBoxColumn";
-            this.fimcontratoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // jogadorBindingSource
             // 
@@ -436,25 +442,117 @@
             // 
             this.jogadorTableAdapter.ClearBeforeFill = true;
             // 
-            // btnPesquisaNome
+            // gerenciaVascoDataSetBindingSource
             // 
-            this.btnPesquisaNome.Location = new System.Drawing.Point(347, 68);
-            this.btnPesquisaNome.Name = "btnPesquisaNome";
-            this.btnPesquisaNome.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisaNome.TabIndex = 26;
-            this.btnPesquisaNome.Text = "Pesquisar";
-            this.btnPesquisaNome.UseVisualStyleBackColor = true;
-            this.btnPesquisaNome.Click += new System.EventHandler(this.btnPesquisaNome_Click);
+            this.gerenciaVascoDataSetBindingSource.DataSource = this.gerenciaVascoDataSet;
+            this.gerenciaVascoDataSetBindingSource.Position = 0;
             // 
-            // btnPesquisaPosicao
+            // gerenciaVascoDataSet1
             // 
-            this.btnPesquisaPosicao.Location = new System.Drawing.Point(516, 68);
-            this.btnPesquisaPosicao.Name = "btnPesquisaPosicao";
-            this.btnPesquisaPosicao.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisaPosicao.TabIndex = 27;
-            this.btnPesquisaPosicao.Text = "Pesquisar";
-            this.btnPesquisaPosicao.UseVisualStyleBackColor = true;
-            this.btnPesquisaPosicao.Click += new System.EventHandler(this.btnPesquisaPosicao_Click);
+            this.gerenciaVascoDataSet1.DataSetName = "GerenciaVascoDataSet1";
+            this.gerenciaVascoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gerenciaVascoDataSet1BindingSource
+            // 
+            this.gerenciaVascoDataSet1BindingSource.DataSource = this.gerenciaVascoDataSet1;
+            this.gerenciaVascoDataSet1BindingSource.Position = 0;
+            // 
+            // jogadorBindingSource1
+            // 
+            this.jogadorBindingSource1.DataMember = "jogador";
+            this.jogadorBindingSource1.DataSource = this.gerenciaVascoDataSetBindingSource;
+            // 
+            // jogadorBindingSource2
+            // 
+            this.jogadorBindingSource2.DataMember = "jogador";
+            this.jogadorBindingSource2.DataSource = this.gerenciaVascoDataSet1BindingSource;
+            // 
+            // jogadorTableAdapter1
+            // 
+            this.jogadorTableAdapter1.ClearBeforeFill = true;
+            // 
+            // jogadorBindingSource3
+            // 
+            this.jogadorBindingSource3.DataMember = "jogador";
+            this.jogadorBindingSource3.DataSource = this.gerenciaVascoDataSet1BindingSource;
+            // 
+            // gerenciaVascoDataSetBindingSource1
+            // 
+            this.gerenciaVascoDataSetBindingSource1.DataSource = this.gerenciaVascoDataSet;
+            this.gerenciaVascoDataSetBindingSource1.Position = 0;
+            // 
+            // idjogadorDataGridViewTextBoxColumn
+            // 
+            this.idjogadorDataGridViewTextBoxColumn.DataPropertyName = "id_jogador";
+            this.idjogadorDataGridViewTextBoxColumn.HeaderText = "id_jogador";
+            this.idjogadorDataGridViewTextBoxColumn.Name = "idjogadorDataGridViewTextBoxColumn";
+            this.idjogadorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // posicaoDataGridViewTextBoxColumn
+            // 
+            this.posicaoDataGridViewTextBoxColumn.DataPropertyName = "posicao";
+            this.posicaoDataGridViewTextBoxColumn.HeaderText = "posicao";
+            this.posicaoDataGridViewTextBoxColumn.Name = "posicaoDataGridViewTextBoxColumn";
+            // 
+            // numerocamisaDataGridViewTextBoxColumn
+            // 
+            this.numerocamisaDataGridViewTextBoxColumn.DataPropertyName = "numero_camisa";
+            this.numerocamisaDataGridViewTextBoxColumn.HeaderText = "numero_camisa";
+            this.numerocamisaDataGridViewTextBoxColumn.Name = "numerocamisaDataGridViewTextBoxColumn";
+            // 
+            // pernaboaDataGridViewTextBoxColumn
+            // 
+            this.pernaboaDataGridViewTextBoxColumn.DataPropertyName = "perna_boa";
+            this.pernaboaDataGridViewTextBoxColumn.HeaderText = "perna_boa";
+            this.pernaboaDataGridViewTextBoxColumn.Name = "pernaboaDataGridViewTextBoxColumn";
+            // 
+            // fimcontratoDataGridViewTextBoxColumn
+            // 
+            this.fimcontratoDataGridViewTextBoxColumn.DataPropertyName = "fim_contrato";
+            this.fimcontratoDataGridViewTextBoxColumn.HeaderText = "fim_contrato";
+            this.fimcontratoDataGridViewTextBoxColumn.Name = "fimcontratoDataGridViewTextBoxColumn";
+            // 
+            // cepDataGridViewTextBoxColumn
+            // 
+            this.cepDataGridViewTextBoxColumn.DataPropertyName = "cep";
+            this.cepDataGridViewTextBoxColumn.HeaderText = "cep";
+            this.cepDataGridViewTextBoxColumn.Name = "cepDataGridViewTextBoxColumn";
+            // 
+            // endereco1DataGridViewTextBoxColumn
+            // 
+            this.endereco1DataGridViewTextBoxColumn.DataPropertyName = "endereco1";
+            this.endereco1DataGridViewTextBoxColumn.HeaderText = "endereco1";
+            this.endereco1DataGridViewTextBoxColumn.Name = "endereco1DataGridViewTextBoxColumn";
+            // 
+            // complementoDataGridViewTextBoxColumn
+            // 
+            this.complementoDataGridViewTextBoxColumn.DataPropertyName = "complemento";
+            this.complementoDataGridViewTextBoxColumn.HeaderText = "complemento";
+            this.complementoDataGridViewTextBoxColumn.Name = "complementoDataGridViewTextBoxColumn";
+            // 
+            // cidadeDataGridViewTextBoxColumn
+            // 
+            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "cidade";
+            this.cidadeDataGridViewTextBoxColumn.HeaderText = "cidade";
+            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            // 
+            // bairroDataGridViewTextBoxColumn
+            // 
+            this.bairroDataGridViewTextBoxColumn.DataPropertyName = "bairro";
+            this.bairroDataGridViewTextBoxColumn.HeaderText = "bairro";
+            this.bairroDataGridViewTextBoxColumn.Name = "bairroDataGridViewTextBoxColumn";
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             // 
             // GerenciaJogador
             // 
@@ -479,6 +577,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenciaVascoDataSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,12 +611,6 @@
         private GerenciaVascoDataSet gerenciaVascoDataSet;
         private System.Windows.Forms.BindingSource jogadorBindingSource;
         private GerenciaVascoDataSetTableAdapters.jogadorTableAdapter jogadorTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idjogadorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn posicaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numerocamisaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pernaboaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fimcontratoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbEstado;
@@ -527,5 +626,25 @@
         private System.Windows.Forms.TextBox tbCep;
         private System.Windows.Forms.Button btnPesquisaNome;
         private System.Windows.Forms.Button btnPesquisaPosicao;
+        private System.Windows.Forms.BindingSource gerenciaVascoDataSetBindingSource;
+        private System.Windows.Forms.BindingSource gerenciaVascoDataSet1BindingSource;
+        private GerenciaVascoDataSet1 gerenciaVascoDataSet1;
+        private System.Windows.Forms.BindingSource jogadorBindingSource1;
+        private System.Windows.Forms.BindingSource jogadorBindingSource2;
+        private GerenciaVascoDataSet1TableAdapters.jogadorTableAdapter jogadorTableAdapter1;
+        private System.Windows.Forms.BindingSource jogadorBindingSource3;
+        private System.Windows.Forms.BindingSource gerenciaVascoDataSetBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idjogadorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn posicaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numerocamisaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pernaboaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fimcontratoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cepDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endereco1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn complementoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bairroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
     }
 }

@@ -67,6 +67,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GerenciaVascoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GerenciaVascoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GerenciaVascoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciaVascoDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GerenciaVascoDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\Endereco.cs" />
     <Compile Include="Model\Jogador.cs" />
     <Compile Include="Program.cs" />
@@ -265,6 +275,28 @@
     </None>
     <None Include="GerenciaVascoDataSet.xss">
       <DependentUpon>GerenciaVascoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GerenciaVascoDataSet1.xsc">
+      <DependentUpon>GerenciaVascoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GerenciaVascoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GerenciaVascoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GerenciaVascoDataSet1.xss">
+      <DependentUpon>GerenciaVascoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GerenciaVascoDataSet2.xsc">
+      <DependentUpon>GerenciaVascoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GerenciaVascoDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GerenciaVascoDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GerenciaVascoDataSet2.xss">
+      <DependentUpon>GerenciaVascoDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

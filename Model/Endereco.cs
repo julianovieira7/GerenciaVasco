@@ -8,7 +8,7 @@ namespace GerenciaVasco.Model
 {
     class Endereco
     {
-        private int id;
+        
         private String cep;
         private String endereco1;
         private String complemento;
@@ -16,7 +16,7 @@ namespace GerenciaVasco.Model
         private String bairro;
         private String estado;
 
-        public int Id { get => id; set => id = value; }
+      
         public string Cep { get => cep; set => cep = value; }
         public string Endereco1 { get => endereco1; set => endereco1 = value; }
         public string Complemento { get => complemento; set => complemento = value; }
